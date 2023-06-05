@@ -21,8 +21,12 @@ export class DeviantArtService {
     const clientId = '25851';
     const redirectUri = 'https://artalchemy.io';
     const scope = 'browse';
+    const state = this.generateRandomState();
 
-    window.location.href = `${authorizeUrl}?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=${encodeURIComponent(scope)}`;
-
+    window.location.href = `${authorizeUrl}?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=${encodeURIComponent(scope)}&state=${encodeURIComponent(state)}`;
+  }
+  generateRandomState() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
 }
+
