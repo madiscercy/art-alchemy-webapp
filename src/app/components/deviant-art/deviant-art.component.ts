@@ -16,10 +16,11 @@ export class DeviantArtComponent implements OnInit {
   }
     
   getDeviantArtToken() {
-    this.deviantArtService.getToken().subscribe(token => {
-      console.log(token);
-      // Here you would handle the token, like saving it in a variable or local storage
-    });
+    // this.deviantArtService.getToken().subscribe(token => {
+    //   console.log(token);
+    //   // Here you would handle the token, like saving it in a variable or local storage
+    // });
+    this.deviantArtService.getToken();
   }
 
 }
