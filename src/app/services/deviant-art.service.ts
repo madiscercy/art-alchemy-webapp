@@ -78,6 +78,7 @@ export class DeviantArtService {
     const accessToken = this.storageService.getSessionStorage('access_token');
 
     const apiUrl = 'https://www.deviantart.com/api/v1/oauth2/gallery/all';
+    const apiUrl2 = '/api/gallery/all';
     let params = new HttpParams();
 
     params = params.append('username', username);
@@ -86,7 +87,7 @@ export class DeviantArtService {
     const headers = {
       Authorization: `Bearer ${accessToken}`,
     };
-    return this.http.get(apiUrl, { headers, params });
+    return this.http.get(apiUrl2, { headers, params });
 
 
   }

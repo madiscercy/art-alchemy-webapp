@@ -1,0 +1,12 @@
+{
+    "/api/gallery/all": {
+      "target": "https://www.deviantart.com",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api/gallery/all": "api/v1/oauth2/gallery/all"
+      },
+      "logLevel": "debug"
+    }
+  }
+  
