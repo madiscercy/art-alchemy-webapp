@@ -76,18 +76,28 @@ export class DeviantArtService {
 
   getUserGallery(username: string) {
     const accessToken = this.storageService.getSessionStorage('access_token');
+    // const apiUrl = 'https://www.deviantart.com/api/v1/oauth2/gallery/all';
+    // const apiUrl2 = '/api/gallery/all';
+    // let params = new HttpParams();
 
-    const apiUrl = 'https://www.deviantart.com/api/v1/oauth2/gallery/all';
-    const apiUrl2 = '/api/gallery/all';
+    // params = params.append('username', username);
+    // params = params.append('mature_content', false);
+
+    // const headers = {
+    //   Authorization: `Bearer ${accessToken}`,
+    // };
+
+    const apiUrl = 'https://v1pu4a0z9b.execute-api.us-east-1.amazonaws.com/api/art-alchemy/deviant-art';
     let params = new HttpParams();
 
     params = params.append('username', username);
-    params = params.append('mature_content', false);
+    params = params.append('access_token', accessToken ? accessToken : '');
 
     const headers = {
-      Authorization: `Bearer ${accessToken}`,
+      // Authorization: `Bearer ${accessToken}`,
+      'x-api-key': 'pL1nxvneOKaIJ9J1YJOfg93e3SDzxcjXOJYGBmif'
     };
-    return this.http.get(apiUrl2, { headers, params });
+    return this.http.get(apiUrl, { headers, params });
 
 
   }

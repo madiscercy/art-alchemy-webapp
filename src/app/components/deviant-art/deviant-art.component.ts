@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import { DeviantArtService } from 'src/app/services/deviant-art.service';
 
 @Component({
@@ -7,7 +7,9 @@ import { DeviantArtService } from 'src/app/services/deviant-art.service';
   styleUrls: ['./deviant-art.component.scss']
 })
 export class DeviantArtComponent implements OnInit {
+  @ViewChild('usernameInput') usernameInput!: ElementRef;
 
+  images: any[] = [];
 
   constructor(private deviantArtService: DeviantArtService) { }
 
@@ -26,8 +28,10 @@ export class DeviantArtComponent implements OnInit {
   getUserGallery() {
 
     if (this.deviantArtService.hasValidToken()) {
-      this.deviantArtService.getUserGallery('wasabiibunni').subscribe(gallery => {
+      const username = this.usernameInput.nativeElement.value;
+      this.deviantArtService.getUserGallery(username).subscribe(gallery => {
         console.log(gallery);
+        this.images = gallery as any[];
       });
     }
 

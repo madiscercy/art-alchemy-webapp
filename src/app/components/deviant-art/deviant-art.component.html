@@ -3,3 +3,9 @@
   Get Deviant Art
 </button>
 <button class="text-white" (click)="getUserGallery()">Search Deviantart</button>
+<input type="text" #usernameInput />
+<div>
+  <div *ngFor="let image of images">
+    <img src="{{ image }}" />
+  </div>
+</div>
