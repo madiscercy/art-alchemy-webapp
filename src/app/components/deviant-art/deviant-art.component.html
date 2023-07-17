@@ -1,4 +1,4 @@
-<p>deviant-art works!</p>
+<!-- <p>deviant-art works!</p>
 <button class="text-white" (click)="getDeviantArtToken()">
   Get Deviant Art
 </button>
@@ -8,4 +8,53 @@
   <div *ngFor="let image of images">
     <img src="{{ image }}" />
   </div>
+</div> -->
+
+<div class="ml-4">
+  <div>
+    <h1
+      class="font-cursive font-semibold text-alchemy-white md:text-5xl text-4xl mb-0 mt-4"
+    >
+      Art Alchemy
+    </h1>
+  </div>
+  <div>
+    <input type="text" #usernameInput />
+    <button
+      class="rounded bg-alchemy-orange p-2 m-4 text-alchemy-licorice text-center"
+    >
+      Get DeviantArt User
+    </button>
+  </div>
+
+  <div>
+    <div *ngFor="let image of images">
+      <img src="{{ image }}" />
+    </div>
+  </div>
+
+  <img
+    class="w-80 h-80 object-contain mx-auto"
+    src="assets/images/art-alchemy-logo-1-removebg.png"
+    alt="Art Alchemy logo"
+  />
 </div>
+
+<footer class="w-full fixed bottom-5 text-center py-4">
+  <div class="bg-alchemy-purple w-52 h-24 rounded-md mx-auto py-4">
+    <a href="https://www.linkedin.com/in/madison-scercy/" target="_blank">
+      <img
+        class="w-16 h-16 object-contain inline-block mb-8 mr-4"
+        src="assets/images/linkedin.png"
+        alt="LinkedIn logo"
+      />
+    </a>
+    <a href="https://madiscercy.github.io" target="_blank">
+      <img
+        class="w-16 h-16 object-contain mb-8 inline-block"
+        src="assets/images/github-logo.png"
+        alt="GitHub logo"
+      />
+    </a>
+  </div>
+</footer>
