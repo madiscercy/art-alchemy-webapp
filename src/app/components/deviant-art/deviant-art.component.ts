@@ -17,14 +17,6 @@ export class DeviantArtComponent implements OnInit {
     this.deviantArtService.checkAuthorization();
   }
 
-  getDeviantArtToken() {
-    // this.deviantArtService.getToken().subscribe(token => {
-    //   console.log(token);
-    //   // Here you would handle the token, like saving it in a variable or local storage
-    // });
-    this.deviantArtService.authorize();
-  }
-
   getUserGallery() {
 
     if (this.deviantArtService.hasValidToken()) {
@@ -33,6 +25,8 @@ export class DeviantArtComponent implements OnInit {
         console.log(gallery);
         this.images = gallery as any[];
       });
+    } else {
+      this.deviantArtService.authorize();
     }
 
   }
