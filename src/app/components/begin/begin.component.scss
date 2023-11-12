@@ -1,0 +1,68 @@
+.begin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #D4AF37;
+    /* Gold color for text */
+}
+
+.decorative-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorative-element.left {
+    margin-right: 40px;
+}
+
+.decorative-element.right {
+    margin-left: 40px;
+}
+
+.decorative-element img {
+    height: 600px;
+    width: auto;
+}
+
+.welcome-text h1 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.welcome-text p {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.begin-button {
+    background-color: #3D155F;
+    /* Deep purple */
+    color: #fff;
+    border: none;
+    padding: 30px 60px;
+    /* Larger padding for a bigger button */
+    border-radius: 8px;
+    /* Slightly larger border radius for a softer look */
+    cursor: pointer;
+    font-size: 30px;
+    /* Larger font size for better readability */
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+}
+
+.begin-button:hover,
+.begin-button:focus {
+    transform: scale(1.05);
+    /* Slight scale on hover for interaction feedback */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Larger shadow on hover */
+    background-color: #4D5F7F;
+    /* Lighter shade of purple */
+}

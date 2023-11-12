@@ -1,0 +1,46 @@
+.stepper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #2C303B;
+}
+
+.step {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #3D155F;
+    color: #D4AF37;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.step.active {
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    transform: scale(1.1);
+}
+
+.step:not(.active):hover {
+    background-color: #4D5F7F;
+    cursor: pointer;
+}
+
+/* Optional: Add a connector between steps if desired */
+.stepper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #D4AF37;
+    z-index: -1;
+}
+
+.step:first-child {
+    margin-left: 0;
+}
+
+.step:last-child {
+    margin-right: 0;
+}

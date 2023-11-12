@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+.main-container {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #2C303B;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    background-color: #1c1f25;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 170px;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-footer {
+    background-color: #3D155F;
+    color: #D4AF37;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-link img {
+    height: 25px;
+    /* Small icons for LinkedIn and GitHub */
+    width: auto;
+    filter: invert(100%);
+}
+
+.decorative-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorative-element.left {
+    margin-right: 40px;
+}
+
+.decorative-element.right {
+    margin-left: 40px;
+}
+
+.decorative-element img {
+    height: 600px;
+    width: auto;
+}
+
+/* Stepper styles (add here or in stepper component CSS) */
+/* ... (Refer to the previous stepper CSS) ... */
+
+/* Overriding styles for headers to use 'Cinzel' */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cinzel', serif;
+}
