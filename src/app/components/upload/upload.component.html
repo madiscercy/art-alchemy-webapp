@@ -1,0 +1,10 @@
+<div class="upload-container">
+  <input type="file" (change)="onFileSelected($event)" hidden #fileInput />
+  <button (click)="fileInput.click()">Select Image</button>
+  <div *ngIf="selectedImage" class="image-preview">
+    <img [src]="selectedImage" alt="Selected Image" />
+  </div>
+  <button *ngIf="selectedImage" (click)="nextClick()">
+    Proceed to Next Step
+  </button>
+</div>

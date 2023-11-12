@@ -1,0 +1,15 @@
+<div class="style-selection-container">
+  <div *ngIf="selectedImage" class="image-preview">
+    <img [src]="selectedImage" alt="Selected Image" />
+  </div>
+
+  <div class="style-buttons">
+    <button *ngFor="let style of styles" (click)="selectStyle(style)">
+      {{ style }}
+    </button>
+  </div>
+
+  <button *ngIf="selectedStyle" (click)="goToNextStep()">
+    Go to Next Step
+  </button>
+</div>

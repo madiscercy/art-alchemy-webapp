@@ -1,0 +1,26 @@
+.style-selection-container {
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.style-buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px solid #3D155F;
+    background-color: #fff;
+    color: #3D155F;
+    cursor: pointer;
+}
+
+.style-buttons button:hover {
+    background-color: #3D155F;
+    color: #fff;
+}
+
+/* Style for 'Go to Next Step' button */
+/* ... Similar to the button style in previous components ... */
