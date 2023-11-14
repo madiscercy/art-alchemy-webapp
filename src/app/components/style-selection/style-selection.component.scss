@@ -3,10 +3,13 @@
 }
 
 .image-preview img {
-    max-width: 100%;
+    display: block;
+    max-width: 600px;
     height: auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    max-height: 600px;
 }
+
 
 .style-buttons button {
     margin: 5px;
@@ -22,5 +25,30 @@
     color: #fff;
 }
 
-/* Style for 'Go to Next Step' button */
-/* ... Similar to the button style in previous components ... */
+
+
+.next-button button {
+    margin: 10px 0;
+    /* Adjust the margin as needed */
+    padding: 10px 15px;
+    border: 1px solid #3D155F;
+    background-color: #fff;
+    color: #3D155F;
+    cursor: pointer;
+    display: block;
+    /* Ensure the button is a block-level element */
+    margin: 20px auto;
+    /* Center the button horizontally */
+    width: auto;
+    /* Adjust the width as needed */
+}
+
+.next-button button:hover {
+    background-color: #3D155F;
+    color: #fff;
+}
+
+/* Optional: Add transition for a smoother hover effect */
+.next-button button {
+    transition: background-color 0.3s, color 0.3s;
+}

@@ -8,8 +8,9 @@
       {{ style }}
     </button>
   </div>
-
-  <button *ngIf="selectedStyle" (click)="goToNextStep()">
-    Go to Next Step
-  </button>
+  <div class="next-button">
+    <button *ngIf="selectedStyle" (click)="goToNextStep()">
+      Go to Next Step
+    </button>
+  </div>
 </div>

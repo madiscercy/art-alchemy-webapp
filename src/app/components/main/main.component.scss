@@ -7,6 +7,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-header {
@@ -22,11 +23,12 @@
 }
 
 .content-area {
+    flex-grow: 1;
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
 }
 
 .main-footer {
@@ -70,10 +72,18 @@
     width: auto;
 }
 
-/* Stepper styles (add here or in stepper component CSS) */
-/* ... (Refer to the previous stepper CSS) ... */
+/* Hide decorative elements on smaller screens */
+@media (max-width: 1024px) {
+    .decorative-element {
+        display: none;
+    }
 
-/* Overriding styles for headers to use 'Cinzel' */
+    .content-area {
+        padding: 40px 20px;
+        /* Adjust the padding for smaller screens if needed */
+    }
+}
+
 h1,
 h2,
 h3,
