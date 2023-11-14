@@ -5,11 +5,16 @@
 
 button {
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 20px 50px;
+    font-size: 20px;
     border: none;
     background-color: #3D155F;
     color: white;
     cursor: pointer;
+    letter-spacing: 1px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
