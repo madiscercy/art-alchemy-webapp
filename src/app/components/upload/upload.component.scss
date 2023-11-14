@@ -24,16 +24,21 @@ button:hover {
 .image-preview {
     margin-top: 20px;
     width: 200px;
-    /* Adjust as needed */
     height: 200px;
-    /* Adjust as needed */
     overflow: hidden;
     border-radius: 50%;
-    /* Circular crop */
     display: inline-block;
 }
 
 .image-preview img {
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .image-preview {
+        max-width: 200px;
+        max-height: 200px;
+        margin: 10px auto;
+    }
 }

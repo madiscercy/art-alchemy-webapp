@@ -27,3 +27,11 @@ button {
 button:hover {
     background-color: #4D5F7F;
 }
+
+@media (max-width: 768px) {
+    .image-preview img {
+        max-width: 200px;
+        max-height: 200px;
+        margin: 10px auto;
+    }
+}

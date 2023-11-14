@@ -33,3 +33,11 @@ button {
 button:hover {
     background-color: #4D5F7F;
 }
+
+@media (max-width: 768px) {
+    img {
+        max-width: 150px;
+        max-height: 150px;
+        margin: 10px auto;
+    }
+}
