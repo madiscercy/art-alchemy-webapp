@@ -1,0 +1,30 @@
+.results-container {
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 45%;
+    /* Adjust based on your layout */
+    height: auto;
+    border: 1px solid #ccc;
+    /* Optional, for image border */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3D155F;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4D5F7F;
+}

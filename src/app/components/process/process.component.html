@@ -1,1 +1,12 @@
-<p>process works!</p>
+<div class="process-container">
+  <div *ngIf="selectedImage" class="image-preview">
+    <img [src]="selectedImage" alt="Selected Image" />
+  </div>
+
+  <p *ngIf="selectedStyle">Selected Style: {{ selectedStyle }}</p>
+  <h3 *ngIf="isLoading">Alchemizing Image... This may take a minute...</h3>
+  <h3 *ngIf="isError">Sorry! An error occured. Please try again.</h3>
+  <button *ngIf="selectedImage && selectedStyle" (click)="alchemize()">
+    Alchemize
+  </button>
+</div>

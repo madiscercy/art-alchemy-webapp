@@ -1,1 +1,8 @@
-<p>result works!</p>
+<div class="results-container">
+  <div class="image-container">
+    <img *ngIf="originalImage" [src]="originalImage" alt="Original Image" />
+    <img *ngIf="newImageUrl" [src]="newImageUrl" alt="New Image" />
+  </div>
+
+  <button (click)="restartProcess()">Restart</button>
+</div>
