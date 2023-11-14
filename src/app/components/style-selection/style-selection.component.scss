@@ -52,3 +52,11 @@
 .next-button button {
     transition: background-color 0.3s, color 0.3s;
 }
+
+@media (max-width: 768px) {
+    .image-preview img {
+        max-width: 200px;
+        max-height: 200px;
+        margin: 10px auto;
+    }
+}
