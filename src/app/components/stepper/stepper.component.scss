@@ -20,10 +20,10 @@
     transform: scale(1.1);
 }
 
-.step:not(.active):hover {
-    background-color: #4D5F7F;
-    cursor: pointer;
-}
+// .step:not(.active):hover {
+//     background-color: #4D5F7F;
+//     cursor: pointer;
+// }
 
 /* Optional: Add a connector between steps if desired */
 .stepper::before {
