@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SplashPageComponent } from './components/splash-page/splash-page.component';
 import { HomeComponent } from './components/home/home.component';
-import { DeviantArtComponent } from './components/deviant-art/deviant-art.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { WelcomeDialogComponent } from './components/welcome-dialog/welcome-dialog.component';
@@ -17,13 +16,12 @@ import { UploadComponent } from './components/upload/upload.component';
 import { StyleSelectionComponent } from './components/style-selection/style-selection.component';
 import { ProcessComponent } from './components/process/process.component';
 import { ResultComponent } from './components/result/result.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: '', component: BeginComponent },
-  { path: 'upload', component: UploadComponent },
-  { path: 'style-selection', component: StyleSelectionComponent },
-  { path: 'process', component: ProcessComponent },
-  { path: 'result', component: ResultComponent }
 ];
 
 @NgModule({
@@ -31,7 +29,6 @@ const routes: Routes = [
     AppComponent,
     SplashPageComponent,
     HomeComponent,
-    DeviantArtComponent,
     WelcomeDialogComponent,
     MainComponent,
     StepperComponent,
@@ -39,16 +36,17 @@ const routes: Routes = [
     UploadComponent,
     StyleSelectionComponent,
     ProcessComponent,
-    ResultComponent
+    ResultComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
